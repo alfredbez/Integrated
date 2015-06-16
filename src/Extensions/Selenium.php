@@ -202,7 +202,7 @@ abstract class Selenium extends \PHPUnit_Framework_TestCase implements Emulator,
     public function type($text, $element)
     {
         $value = ['value' => [$text]];
-        $this->findByNameOrId($element, $text)->postValue($value);
+        $this->findByNameOrId($element)->postValue($value);
 
         return $this;
     }
